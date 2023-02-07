@@ -1,0 +1,271 @@
+/*@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);*/
+@import url(notosanstc.css);
+@import url(heistd.css);
+body{
+  /* 先套用 Noto Sans TC 這個 思源黑體 */
+  font-family: 'hei7','Noto Sans TC', '微軟正黑體', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p,a{
+	color: #383838;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+}
+:root {
+	--white: #ffffff;
+	--ms-gray: #999999;
+	--ms-blue-light: #3690cf;
+	--ms-blue: #0e6eb8;
+	--ms-blue-gradient: linear-gradient(90deg, rgba(42,58,136,1) 0%, rgba(17,118,198,1) 100%);
+	--ms-blue-light: #3690cf;
+	--ms-purple: #8251aa;
+	--ms-purple-light: #965ab2;
+	--ms-red: #ca003d;
+	--ms-orange: #e8810c;
+	--ms-browngray: #786b61;
+	--ms-orange-10p: rgba(244,188,38,0.1);
+	--ms-pink-50p: rgba(202,0,61,0.5);
+	--ms-yellow-gradient: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(244,188,38,1) 100%);
+	--ms-orange-gradient: linear-gradient(270deg, rgba(244,188,38,1) 0%, rgba(232,129,12,1) 100%);
+	--ms-skyblue-gradient: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(43,172,226,1) 100%);
+}
+
+/* 高度%父層需有值 寬度vw 字尺寸vw 字相對單位em */
+
+.wrapper{
+	width: 100vw; /* 1920x1080px */
+	min-width: 1080px;
+	min-height: 1920px;
+	aspect-ratio: 9 / 16;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* 單欄 廣告區塊 */
+.portrait .block-ad{
+	width: 100vw; /* 1080px */
+	height: 88.2407407407vw; /* 953px */
+}
+.portrait .block-ad .box-title{
+	display: flex;
+	height: 20.3703703704vw; /* 220px */
+}
+.portrait .block-ad .box-logo{
+	width: 76.8518518519vw; /* 830px */
+	height: 100%;
+}
+.portrait .block-ad .box-time{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	width: 23.1481481481vw;/* 250px */
+	height: 100%;
+	padding: 1.8518518519vw 3.7037037037vw; /* 20px 40px */
+	position: relative;
+	background: var(--ms-blue-gradient);
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+.block-ad .box-time::before{
+	content:'';
+	display: block;
+	width: 0.78125vw; /* 15px */
+	height: calc(100% - 26.6666666667%); /* 110px */
+	position: absolute;
+	top: 50%;
+	left: 2.0833333333vw; /* 40px */
+	transform: translateY(-50%);
+	border: .15vw solid var(--ms-blue);
+	border-right: transparent;
+	border-radius: 10vw 0 0 10vw;
+}
+.block-ad .box-time p{
+	padding: 0;
+	margin: 0;
+	color: transparent;
+	text-align: right;
+	font-family: 'helvetica',sans-serif;
+	font-weight: bold;
+	line-height: 1.2em;
+}
+.block-ad .box-time .date{
+	font-size: 3vw;
+	letter-spacing: .05em;
+}
+.block-ad .box-time .time{
+	font-size: 5.5vw;
+	letter-spacing: .05em;
+}
+
+.block-ad .box-video{
+	height: 57.6851851852vw; /* 608+10+5=623px */
+	padding: 0.9259259259vw 0 0.462962963vw; /* 10px 0 5px */
+}
+.block-ad .box-video iframe{
+	width: 100%;
+	height: 100%;
+}
+.block-ad .box-mediacare{
+	display: flex;
+	background-color: var(--ms-purple);
+	height: 9.2592592593vw; /* 100px */
+	margin-bottom: 0.9259259259vw; /* 10px */
+}
+.block-ad .box-mediacare .logo{
+	width: 27.7777777778vw; /* 300px */
+	background-color: var(--ms-purple-light);
+}
+.block-ad .box-mediacare .box-txt{
+	padding: 0 1.8518518519vw; /* 0 20px */
+}
+.portrait .block-dm{
+	width: 100vw;
+	height: 89.537037037vw; /* 967px */
+	background-color: #fa0;
+}
+
+
+/* 綜合區塊 */
+.block-num.all{
+	height: 89.537037037vw; /* 967px */
+	background-color: #fa0;
+}
+.block-num.all .content{
+    background: var(--ms-skyblue-gradient);
+    width: 100vw;
+    height: 100%;
+}
+.block-num.all .box-title{
+	display: flex;
+	align-content: center;
+	height: 12.962962963vw; /* 140px */
+	background-color: var(--ms-blue);
+}
+.block-num.all .box-title .box-time{
+	display: flex;
+	flex-wrap: wrap;
+	width: 21.2962962963vw; /* 230px */
+	justify-content: flex-start;
+	align-content: center;
+}
+.block-num.all .box-title .box-time .date,
+.block-num.all .box-title .box-time .time{
+	width: 100%;
+	font-size: 2vw;
+	font-family: 'hei9';
+	color: var(--white);
+	text-align: center;
+}
+.block-num.all .box-title .box-time .time{
+	font-size: 6vw;
+	transform: scaleY(1.2);
+}
+.block-num.all .box-title .box-txt{
+	width: 78.7037037037vw; /* 850px */
+	display: flex;
+	align-items: center;
+}
+.block-num.all .box-title .box-txt p{
+	font-size: 7.6vw;
+	transform: scaleY(1.2);
+	color: var(--white);
+	font-family: 'hei12';
+}
+
+
+
+.block-num.all .box-info-cards{
+	display: flex;
+	flex-flow: row wrap;
+	height: 76.5740740741vw; /* 967-140=827px */
+	padding: 1.8518518519vw 4.1666666667vw 0; /* 20px 30px 0*/
+	justify-content: space-between;
+	align-content: flex-start;
+}
+.block-num.all .box-info-cards .card{
+	 background-color: var(--ms-blue-light);
+	 width: 45vw;
+	 height: 22.2222222222vw; /* 220px */
+	 border: .2em solid var(--white);
+	 border-radius: 1.5vw;
+	 padding: .8em;
+	 display: flex;
+	 flex-flow: row;
+	 justify-content: space-between;
+	 margin-bottom: 2.6851851852vw; /* 29px */
+}
+.block-num.all .box-info-cards .card:nth-child(n+5){
+	margin-bottom: 0;
+}
+.box-info-cards .card .dept{
+	width: 10%;
+	font-size: 3.2vw;
+	font-family: 'hei9';
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-content: center;
+	text-align: center;
+}
+.box-info-cards .card .dept p{
+	color: var(--white);
+}
+.box-info-cards .card .box-num{
+	width: 88%;
+	display: flex;
+	font-size: 3vw;
+	background-color: var(--white);
+	height: 100%;
+	border-radius: 1vw;
+	padding: .2em;
+	align-items: center;
+}
+.box-info-cards .card .box-now{
+	width: 70%;
+	text-align: center;
+}
+.box-info-cards .card .box-now p:first-child{
+	color: var(--ms-blue);
+	font-size: 4vw;	
+}
+.box-info-cards .card .box-now p:last-child{
+	font-size: 13vw;
+	font-family: 'hei12';
+	letter-spacing: -.1em;
+	transform: scaleY(1.3);
+	text-align: center;	
+	color: var(--ms-red);
+}
+.box-info-cards .card .box-next{
+	width: 30%;
+	background-color: var(--ms-gray);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 1vw;
+}
+.box-info-cards .card .box-next p:first-child{
+	writing-mode: vertical-lr;
+	color: var(--white);
+}
+.box-info-cards .card .box-next p:last-child{
+	font-size: 6.5vw;
+	font-family: 'hei9';
+	letter-spacing: -.1em;
+	transform: translateX(-5%);
+	color: var(--white);
+}
+
+
+
+
+
+/* iframe */
+.portrait iframe.block-frame{
+	width: 100%;
+	min-height: 100%;
+}
