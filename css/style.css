@@ -40,6 +40,7 @@ h1,h2,h3,h4,h5,h6,p,a{
 	aspect-ratio: 9 / 16;
 	display: flex;
 	flex-wrap: wrap;
+	overflow: hidden;
 }
 
 /* 單欄 廣告區塊 */
