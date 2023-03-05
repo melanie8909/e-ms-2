@@ -272,7 +272,7 @@ h1,h2,h3,h4,h5,h6,p,a{
 }
 
 
-
+/* 2023-03-05 Begin */
 /* info-closed */
 .box-info-closed{
 	display: flex;
@@ -320,3 +320,4 @@ h1,h2,h3,h4,h5,h6,p,a{
 .box-info-closed .box-img img{
 	width: 100%;
 }
+/* 2023-03-05 End */
